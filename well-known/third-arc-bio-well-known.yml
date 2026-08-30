@@ -1,0 +1,33 @@
+generated: '2026-08-30'
+method: probed
+source: https://thirdarcbio.com/.well-known/
+note: >-
+  Every /.well-known/ path probed on the single host Third Arc Bio operates returned 404. The
+  origin is a Gatsby static marketing site that serves its 404 page body for any unmatched path,
+  so no path returned a document of any kind. No WellKnown or SecurityTxt pointer is emitted:
+  this file records an absence, not a served surface. No api./developer./docs./mcp. subdomain
+  resolves for thirdarcbio.com, so there is no second host to probe.
+hosts:
+- host: thirdarcbio.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

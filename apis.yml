@@ -1,17 +1,34 @@
 aid: third-arc-bio
 name: Third Arc Bio
-description: 'Third Arc Bio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Third Arc Bio is a clinical-stage biotechnology company headquartered in Lower Gwynedd,
+  Pennsylvania, developing multifunctional antibodies that build immune synapses to precisely
+  activate or inhibit T cells. Its ARCStim platform targets solid tumors and its ARCTag platform
+  pursues tissue-specific precision immune regulation for immunology and inflammation (I&I)
+  indications; lead program ARC101 is a bispecific T-cell engager in a Phase 1 trial in patients
+  with CLDN6-expressing solid tumors. The company launched in 2022 with seed financing from Omega
+  Funds, raised an oversubscribed $165M Series A, and closed a $52M Series A extension in February
+  2026 with Andreessen Horowitz joining the syndicate. Third Arc Bio publishes no public API,
+  developer portal, SDK or machine-readable specification — it is a therapeutics developer, not a
+  software vendor.
+image: https://thirdarcbio.com/thirdarc-og-image.png
 url: https://raw.githubusercontent.com/api-evangelist/third-arc-bio/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-30'
 modified: '2026-08-30'
 tags:
 - Company
+- Biotechnology
+- Therapeutics
+- Antibodies
+- Oncology
+- Immunology
+- Life Sciences
+- Clinical Stage
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/third-arc-bio-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/third-arc-bio_stock/
+  url: https://thirdarcbio.com/
+- type: PrivacyPolicy
+  url: https://thirdarcbio.com/privacy-policy/
+- type: TermsOfService
+  url: https://thirdarcbio.com/terms-of-service/
+- type: Blog
+  url: https://thirdarcbio.com/news/
+- type: Support
+  url: mailto:info@thirdarcbio.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/third-arc-bio/
+- type: LLMsTxt
+  url: llms/third-arc-bio-llms.txt
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Third Arc Bio is a clinical-stage antibody therapeutics developer; thirdarcbio.com is a Gatsby
+    static marketing site with only science, pipeline, team, news and policy pages, and every
+    contract-discovery path (/openapi.json, /swagger.json, /api-docs, /docs, /developers, /api,
+    /graphql, /llms.txt) plus every /.well-known/ document returns the site's 404 body, while
+    api., developer., docs. and mcp. subdomains do not resolve in DNS.
+  evidence:
+  - url: https://thirdarcbio.com/
+    status: 200
+  - url: https://thirdarcbio.com/openapi.json
+    status: 404
+  - url: https://thirdarcbio.com/developers
+    status: 404
+  - url: https://thirdarcbio.com/.well-known/agent-card.json
+    status: 404
+  - url: https://thirdarcbio.com/.well-known/api-catalog
+    status: 404
+  checked: '2026-08-30'
