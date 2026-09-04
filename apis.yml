@@ -11,6 +11,18 @@ description: >-
   2026 with Andreessen Horowitz joining the syndicate. Third Arc Bio publishes no public API,
   developer portal, SDK or machine-readable specification — it is a therapeutics developer, not a
   software vendor.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://thirdarcbio.com/thirdarc-og-image.png
 url: https://raw.githubusercontent.com/api-evangelist/third-arc-bio/refs/heads/main/apis.yml
 x-type: company
